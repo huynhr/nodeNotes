@@ -15,8 +15,9 @@ const doSomethingAsyncTwo = () => {
 const doSomething = async function() {
   console.log(await doSomethingAsync());
   console.log(await doSomethingAsyncTwo());
+  return 'hello world, I am now a promise.';
 }
 
-doSomething();
+doSomething().then(result => console.log(result));
 
 console.log('after');
